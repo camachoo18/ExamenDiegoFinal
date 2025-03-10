@@ -44,9 +44,11 @@ Ejecuté el script `deploy.sh`, que realiza las siguientes acciones:
 - **Genera certificados SSL con certbot.**
 - **Copia los certificados a la ubicación esperada por la aplicación:**
   ```sh
-  cp /etc/letsencrypt/live/dev3.cyberbunny.online/fullchain.pem /ruta/destino
-  cp /etc/letsencrypt/live/dev3.cyberbunny.online/privkey.pem /ruta/destino
+  cp /etc/letsencrypt/live/dev3.cyberbunny.online/fullchain.pem .
+  cp /etc/letsencrypt/live/dev3.cyberbunny.online/privkey.pem .
   ```
+- **Comprueba que los tienes una vez ejecutado el deploy.sh**
+  Una vez ejecutado el deploy.sh. Comprueba que los tienes con ls dentro de mi tu repo
 
 ---
 
@@ -58,7 +60,7 @@ Ejecuté el servidor con HTTPS configurado:
 node server.js
 ```
 
-Para verificar su estado, revisé los logs y confirmé que estaba funcionando correctamente.
+Para verificar su estado, revisé los logs y confirmé que estaba funcionando correctamente, ademas me meti a mi [dev3.cyberbunny.online](https://dev3.cyberbunny.online:3000)
 
 ---
 
@@ -79,7 +81,7 @@ También actualicé el archivo `deploy.yml` para manejar el despliegue automáti
 ### Paso 5: Pruebas
 
 1. **Verificación de HTTPS:**
-   - Accedí a [https://dev3.cyberbunny.online](https://dev3.cyberbunny.online) y confirmé que el sitio web se carga correctamente con HTTPS.
+   - Accedí a [https://dev3.cyberbunny.online](https://dev3.cyberbunny.online:3000) y confirmé que el sitio web se carga correctamente con HTTPS.
 
 2. **Pruebas de CORS:**
    - Realicé solicitudes desde un origen diferente y verifiqué que las respuestas se recibían correctamente, confirmando que CORS estaba configurado adecuadamente.
