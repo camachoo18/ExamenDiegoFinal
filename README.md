@@ -17,6 +17,7 @@ node server.js
 
 Con estos pasos, mi proyecto esta configurado para usar HTTPS y CORS.
 
+![alt text](image.png)
 
 
 ## Una vez se tenga el dominio cyberbunny con https y cors, toca hacer un deploy cd/ci
