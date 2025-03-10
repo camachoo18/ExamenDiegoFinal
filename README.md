@@ -1,67 +1,62 @@
-Paso 1: Una vez tenga creado mi proyecto, tengo que acceder a mi vps
+# Informe del Examen
 
-Paso 2: Instalar las dependencias necesarias
-npm i
+## Introducción
 
-Paso 3: Configurar el servidor (server.js)
-lo que tengo en mi server.js
+Este documento describe los pasos que he seguido para completar el examen, las herramientas que he utilizado y las pruebas que demuestran que cada uno de los objetivos se ha cumplido.
 
-Paso 5: Ejecuto el script de despliegue en mi vps 
-Ejecuta el script de despliegue para instalar las dependencias y generar los certificados SSL.
+## Pasos Seguidos
 
-./deploy.sh
+### Paso 1: Configuración del Entorno
 
-Paso 6: Inicio el servidor
-Inicio el servidor con HTTPS configurado.
-node server.js
-
-Con estos pasos, mi proyecto esta configurado para usar HTTPS y CORS.
-
-![alt text](image.png)
-
-
-
-# Importante una vez tenga mi proyecto funcionando en el dominio de cyberbunny con https y cors, deberia acceder a la terminal y subir por ssh mi vps ANTES QUE NADA:
-ssh root@MI-ip
-sudo apt update
-git clone https://github.com/camachoo18/NOMBRE-REPO.git
+1. **Acceso al VPS:**
+   ```sh
+   ssh root@MI-IP ```
+Una vez dentro aplicamos:
+Actualización de paquetes con sudo apt update
+Clonamos el repo
+Instalo las dependencias
 sudo apt install npm
 npm install -g pm2
-cd mi-repo
+cd NOMBRE-REPO
 npm install
 
-pm2 start server.js --name "mi-aplicacion"
-pm2 stop mi-aplicacion
-pm2 delete mi aplicacion
+Paso 2: Ejecución del Script de Despliegue
+Ejecución del script deploy.sh:
 
-pm2 save
-pm2 startup
+Este script realiza las siguientes acciones:
 
-# Paso 1: Configurar los secretos en GitHub
-Ve a tu repositorio en GitHub.
-Haz clic en "Settings" (Configuración).
-En el menú de la izquierda, selecciona "Secrets and variables" y luego "Actions".
-Haz clic en "New repository secret" y añade los siguientes secretos:
-SSH_HOST: La dirección IP o el nombre de host de tu servidor.
+Actualiza los paquetes del sistema.
+Instala npm, nodejs y certbot.
+Genera certificados SSL usando certbot.
+Copia los certificados generados a la ubicación esperada por la aplicación.
+Paso 3: Inicio del Servidor
+Inicio del servidor con HTTPS configurado:
+
+Verificación del estado del servidor:
+
+Paso 4: Configuración de GitHub Actions
+Configuración de secretos en GitHub:
+
+SSH_HOST: La dirección IP o el nombre de host de mi servidor.
 SSH_USER: El nombre de usuario para conectarse a tu servidor.
 SSH_PASSWORD: La contraseña para el usuario SSH.
+Actualización del archivo deploy.yml: El archivo deploy.yml está configurado para realizar el despliegue automáticamente cuando se hace un push a la rama main.
 
-# Paso 2: Actualizar el archivo deploy.yml (ya lo he aplicado antes con el https)
-Asegúrate de que tu archivo deploy.yml esté configurado correctamente para realizar el despliegue.
+Paso 5: Pruebas
+Verificación de HTTPS: Accedí a https://dev3.cyberbunny.online y verifiqué que el sitio web se carga correctamente con HTTPS.
 
-# Paso 5: Hacer un push a la rama main
-Haz un commit y un push de tus cambios a la rama main de tu repositorio en GitHub.
-git add .
-git commit -m "Configurar HTTPS y CORS para despliegue"
-git push origin main
+Pruebas de CORS: Realicé solicitudes desde un origen diferente y verifiqué que las respuestas se recibían correctamente, confirmando que CORS está configurado adecuadamente.
 
-# Paso 6: Verificar el despliegue
-Una vez que hago el push a la rama main, GitHub Actions debería ejecutar el flujo de trabajo definido en deploy.yml y desplegar ,mi aplicación en el servidor remoto. Puedes verificar el estado del despliegue en la pestaña "Actions" de tu repositorio en GitHub.
+Pruebas de API: Utilicé herramientas como Postman para probar las rutas /posts y /posts (GET y POST) y verifiqué que las entradas del blog se obtienen y se agregan correctamente.
 
- debería estar desplegada y funcionando en tu VPS con HTTPS y CORS configurados. PM2 se encargará de gestionar tu aplicación
+Herramientas Utilizadas
+VPS: Para alojar la aplicación.
+GitHub Actions: Para automatizar el despliegue.
+Certbot: Para generar certificados SSL.
+PM2: Para gestionar el proceso del servidor.
+Postman: Para probar las API.
+Conclusión
+He seguido todos los pasos necesarios para configurar y desplegar la aplicación con HTTPS y CORS. Las pruebas realizadas demuestran que cada uno de los objetivos se ha cumplido correctamente.
 
-
-# Importante
-SSH_HOST--ES MI IP de linode
-SSH_USER--es root
-SSH_PASSWORD--ES la contrasena que nos da diego
+![alt text](image.png)
+![alt text](image-1.png)
