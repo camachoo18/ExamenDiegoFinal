@@ -12,7 +12,7 @@ npm install
 certbot certonly --standalone -d dev3.cyberbunny.online --non-interactive --agree-tos -m estivencamachops@gmail.com
 
 # Copiar los certificados generados a la ubicación esperada por tu aplicación
-cp /etc/letsencrypt/live/dev3.cyberbunny.online/fullchain.pem /root/ExamenDiegoFinal/fullchain.pem
-cp /etc/letsencrypt/live/dev3.cyberbunny.online/privkey.pem /root/ExamenDiegoFinal/privkey.pem
+cp /etc/letsencrypt/live/dev3.cyberbunny.online/fullchain.pem 
+cp /etc/letsencrypt/live/dev3.cyberbunny.online/privkey.pem 
 
 echo "proceso completado"
