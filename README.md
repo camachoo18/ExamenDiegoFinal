@@ -21,19 +21,20 @@ Este documento describe los pasos que he seguido para completar el examen, las h
 3. **Clonación del repositorio:**
    ```sh
    git clone <URL-DEL-REPO>
-   cd NOMBRE-REPO
+   
    ```
 4. **Instalación de dependencias:**
    ```sh
    sudo apt install npm
    npm install -g pm2
-   npm install
+   
    ```
 5. **Vuelves a tu repo y ejecutras:**
       ```sh
    cd NOMBRE-REPO
    npm install
-   pm2 start server.js --name mi-aplicacion
+   node server.js para comprobar que se implementa el https+cors
+   pm2 start server.js --name mi-aplicacion para hacer el despliegue
    ```
 ---
 
@@ -53,7 +54,7 @@ Ejecuté el script `deploy.sh`, que realiza las siguientes acciones:
   cp /etc/letsencrypt/live/dev3.cyberbunny.online/privkey.pem .
   ```
 - **Comprueba que los tienes una vez ejecutado el deploy.sh**
-  Una vez ejecutado el deploy.sh. Comprueba que los tienes con ls dentro de mi tu repo
+  Una vez ejecutado el deploy.sh compruebo que lo tengo con `ls` dentro de mi repo o carpeta.
 
 ---
 
