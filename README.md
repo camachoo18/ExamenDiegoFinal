@@ -20,7 +20,7 @@ Con estos pasos, mi proyecto esta configurado para usar HTTPS y CORS.
 ![alt text](image.png)
 
 
-## Una vez se tenga el dominio cyberbunny con https y cors, toca hacer un deploy cd/ci
+
 # Importante una vez tenga mi proyecto funcionando en el dominio de cyberbunny con https y cors, deberia acceder a la terminal y subir por ssh mi vps ANTES QUE NADA:
 ssh root@MI-ip
 sudo apt update
