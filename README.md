@@ -13,6 +13,7 @@ Este documento describe los pasos que he seguido para completar el examen, las h
 1. **Acceso al VPS:**
    ```sh
    ssh root@MI-IP
+   usar la password que elegimos en el vps
    ```
 2. **Actualización de paquetes:**
    ```sh
