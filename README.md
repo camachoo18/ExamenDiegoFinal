@@ -56,7 +56,7 @@ git commit -m "Configurar HTTPS y CORS para despliegue"
 git push origin main
 
 # Paso 6: Verificar el despliegue
-Una vez que hagas push a la rama main, GitHub Actions debería ejecutar el flujo de trabajo definido en deploy.yml y desplegar tu aplicación en el servidor remoto. Puedes verificar el estado del despliegue en la pestaña "Actions" de tu repositorio en GitHub.
+Una vez que hago el push a la rama main, GitHub Actions debería ejecutar el flujo de trabajo definido en deploy.yml y desplegar ,mi aplicación en el servidor remoto. Puedes verificar el estado del despliegue en la pestaña "Actions" de tu repositorio en GitHub.
 
  debería estar desplegada y funcionando en tu VPS con HTTPS y CORS configurados. PM2 se encargará de gestionar tu aplicación
 
