@@ -70,19 +70,9 @@ Configuré los secretos en GitHub para la automatización del despliegue:
 - **SSH_USER:** Nombre de usuario SSH.
 - **SSH_PASSWORD:** Contraseña del usuario SSH.
 
-También actualicé el archivo `deploy.yml` para manejar el despliegue automático en la rama `main`.
+También actualicé el archivo `deploy.yml` para manejar el despliegue automático en la rama `main`. Es decir pm2 stop mi-aplicacion(nombre que le has puesto en pm2 a la hora de inicarlo con pm2 start server.js --name test-deploy) && cd ExamenDiegoFinal(repo en el que estoy trabajando) && git pull && npm install && pm2 start mi-aplicacion &
 
-Ejemplo de configuración en `deploy.yml`:
 
-```yaml
-- name: Desplegar aplicación
-  run: |
-    pm2 stop mi-aplicacion && \
-    cd ExamenDiegoFinal && \
-    git pull && \
-    npm install && \
-    pm2 start server.js --name mi-aplicacion
-```
 
 ---
 
