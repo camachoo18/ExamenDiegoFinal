@@ -1,5 +1,4 @@
-Paso 1: Configurar el script de despliegue (deploy.sh)
-Asegúrate de que tu script de despliegue (deploy.sh) esté configurado correctamente para instalar las dependencias necesarias y generar los certificados SSL.
+Paso 1: Una vez tenga creado mi proyecto, tengo que acceder a mi vps
 
 Paso 2: Instalar las dependencias necesarias
 npm i
@@ -7,19 +6,17 @@ npm i
 Paso 3: Configurar el servidor (server.js)
 lo que tengo en mi server.js
 
-Paso 4: Actualizar el script del cliente (public/script.js)
-No necesitas hacer cambios en script.js ya que no afecta directamente la configuración de HTTPS y CORS.
-
-Paso 5: Ejecutar el script de despliegue
+Paso 5: Ejecuto el script de despliegue en mi vps 
 Ejecuta el script de despliegue para instalar las dependencias y generar los certificados SSL.
 
 ./deploy.sh
 
-Paso 6: Iniciar el servidor
-Inicia el servidor con HTTPS configurado.
+Paso 6: Inicio el servidor
+Inicio el servidor con HTTPS configurado.
 node server.js
 
-Con estos pasos, tu proyecto debería estar configurado para usar HTTPS y CORS, manteniendo la funcionalidad actual de tu proyecto.
+Con estos pasos, mi proyecto esta configurado para usar HTTPS y CORS.
+
 
 
 ## Una vez se tenga el dominio cyberbunny con https y cors, toca hacer un deploy cd/ci
