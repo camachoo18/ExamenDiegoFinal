@@ -29,7 +29,12 @@ Este documento describe los pasos que he seguido para completar el examen, las h
    npm install -g pm2
    npm install
    ```
-
+5. **Vuelves a tu repo y ejecutras:**
+      ```sh
+   cd NOMBRE-REPO
+   npm install
+   pm2 start server.js --name mi-aplicacion
+   ```
 ---
 
 ### Paso 2: Ejecución del Script de Despliegue
